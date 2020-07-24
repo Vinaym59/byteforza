@@ -1,0 +1,23 @@
+<h1>Sign up</h1>
+<div class="row">
+
+<%= form_for User.new do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br/>
+  <br/>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br/>
+  <br/>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <br/>
+  <br/>
+  <%= f.submit %>
+<% end %>
+<% if flash[:notice] %>
+  <p id="notice"><%= flash[:notice] %></p>
+<% end %>
+</div>
